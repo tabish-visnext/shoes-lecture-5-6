@@ -1,0 +1,31 @@
+
+
+<%= form_for(@rec, :html => {class: "form-horizontal", role: "form"}) do |f|%>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <p>
+         <%= f.label :name%> <br>
+         <%= f.text_field :description%>
+      </p>
+
+      <p>
+         <%= f.label :description%> <br>
+         <%= f.text_area :description%>
+         
+      </p>
+
+      <p>
+           <%= f.submit%>
+       </p>
+
+       <p>
+           <%= link_to "cancel request and go back to listing page", recipes_path%>
+       </p>
+     
+      
+    </div>
+
+
+    
+
+<% end %>

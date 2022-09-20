@@ -1,0 +1,29 @@
+
+
+<div class="well col-md-8 col-md-offset-2">
+   <h4 class="center description">steps:</h4>
+   <hr>
+   <strong><%= simple_format(@rec.description)%></strong> 
+   <p> 
+     created by:-
+   </p>
+   <p class="center"> 
+      <%= link_to gravatar_for(@rec.chef), recipes_path%>
+   </p>
+
+   <p class="center"> 
+      
+      <small><%= @rec.chef.name.capitalize%></small >
+   </p>
+   
+   <p class="center"> 
+      
+      <small><%=  link_to "edit the recipt", edit_recipe_path(@rec)%></small>
+   </p>
+
+   <p class="center"> 
+      
+   <small><%=  link_to "delete the recipt", recipe_path(@rec), method: :delete, data: {confirm: "you sure?", "turbo-method": :delete }%></small>
+   </p>
+</div>   
+

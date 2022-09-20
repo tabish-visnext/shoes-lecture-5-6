@@ -1,0 +1,19 @@
+
+<h1 align="center">all the listings here</h1>
+
+<% @rec.each do |r|%>
+    <table class="table">
+       <tr>
+          <td><%= gravatar_for(r.chef, size: 50)%></td>
+          <td><%= link_to r.name, recipe_path(r)%></td>
+          <td><%= truncate(r.description, length: 150)%></td>
+         
+       </tr>
+
+    </table>
+    
+    
+<% end %>  
+
+
+
